@@ -1,0 +1,19 @@
+{
+	"name": "subscription-demo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {
+		"restify": "*",
+		"minimist": "*"
+	},
+	"devDependencies": {
+		"mocha": "*",
+		"should": "*"
+	},
+	"scripts": {
+		"test": "./node_modules/.bin/mocha --reporter spec"
+	},
+	"author": "Allen",
+	"license": "MIT"
+}
