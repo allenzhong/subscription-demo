@@ -39,3 +39,20 @@ Implementation of pub-sub system from scratch by using Node
 
 3. Client should also apply event mechanism to handle return message and error messages.
 
+
+# Client (REST Client)
+
+1. Client such as PAW can send a message with URL like ‘http://localhost:9080/ publish/mychannel” and a JSON string as request body to server.
+
+2. Client’s messages should include following attribute( currently supported):
+
+    * action: this would trigger work’s task.
+
+    * body: this contains some message that someone would like to send to worker.
+
+# Instruction of System
+
+## Install and Environment
+
+To install all required modules, please type npm install under project directory.
+
