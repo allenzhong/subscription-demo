@@ -9,23 +9,33 @@ Implementation of pub-sub system from scratch by using Node
 
 3. Server can maintain clients list and channels list in order to keep on communicating with client.
 
-4. Traditionally҆if some one would like to use telnet as client, the following command could be available 
+4. Traditionally if some one would like to use telnet as client, the following command could be available 
     * subscribe: subscribe a channel
 
     * unsubscribe: unsubscribe a channel
 
     * publish: publish a message on specify channel
 
-    * listҔlist all channels on server
+    * list: list all channels on server
 
 5. Once client connected with server, client could send command to server. When command is received by server, it have to be validated. If valid, command can emit the event that is already registered on server. If invalid, error handler can be trigger and then return error message to client.
 
 6. The following list include all event registered on server side:
 
-    * subscribeҔ checking channels list, if current channel can be found, client can join this channel, otherwise new channel should be created.ҕ
+    * subscribe: checking channels list, if current channel can be found, client can join this channel, otherwise new channel should be created.ҕ
 
-    * unsubscribeҔ ﬁnding the client related to specify channel, then drop it.
+    * unsubscribe: ﬁnding the client related to specify channel, then drop it.
 
-    * publishҔchecking all clients that currently bind to specify channel, then send message to them one by one.
+    * publish: checking all clients that currently bind to specify channel, then send message to them one by one.
 
-    * listҔreturn all channels list.
+    * list: return all channels list.
+
+
+# Client (Worker)
+
+1. Connecting server with socket and maintaining the long-term connection
+
+2. Client can develop a program that can waiting for message from Server.
+
+3. Client should also apply event mechanism to handle return message and error messages.
+
