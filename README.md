@@ -56,3 +56,14 @@ Implementation of pub-sub system from scratch by using Node
 
 To install all required modules, please type npm install under project directory.
 
+# Start Server
+
+1. To start server, `node index.js`
+
+2. To find out help, `node index.js --help`
+
+# Client
+
+1. `node worker.js`
+2. Test it with REST Client
+
